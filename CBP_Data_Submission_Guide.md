@@ -7,8 +7,8 @@ Biotechnology Information (NCBI), but we recommend the ENA. In this
 document, we will describe the submission process and the structure that
 the projects should have.
 
-![](./media/image1.png){width="6.697916666666667in"
-height="5.288562992125985in"}
+<img src="./media/image1.png"
+style="width:6.69792in;height:5.28856in" />
 
 1.  Registration of a specimen TOLID:
 
@@ -60,13 +60,13 @@ We will adopt the project structure followed by the DToL. For this
 purpose, separate projects for the different types of data should be
 registered:
 
-a.  Data project with all the genomic and transcriptomic data produced.
+1.  Data project with all the genomic and transcriptomic data produced.
 
-b.  Analysis project with the genome assembly.
+2.  Analysis project with the genome assembly.
 
-c.  Analysis project with the alternate genome assembly (optional).
+3.  Analysis project with the alternate genome assembly (optional).
 
-d.  Species overview umbrella project with the data and analysis
+4.  Species overview umbrella project with the data and analysis
     projects as children.
 
 The projects can be registered either to the ENA or the NCBI, but we
@@ -82,7 +82,7 @@ your ENA/EGA user credentials
 you do not have an account yet.
 
 Once you are logged in into the system you can register the data and
-analysis projects by clicking "Register Study (project)" on the
+analysis projects by clicking “Register Study (project)” on the
 Dashboard. Description on how to fill all the fields for CBP projects is
 given below, please, go to
 <https://ena-docs.readthedocs.io/en/latest/submit/study.html> for
@@ -94,61 +94,61 @@ years beyond the present date but you can change it at any time to make
 it sooner or later. Once the data becomes public you may not make it
 private again.
 
-[Data Project registration]{.underline}
+<u>Data Project registration</u>
 
 -   **Short descriptive study title.** The structure of this should be:
-    "***Species name*** (**common name**), genomic and transcriptomic
-    data". For example: "Podarcis lilfordi (Lilford\'s wall lizard),
-    genomic and transcriptomic data".
+    “***Species name*** (**common name**), genomic and transcriptomic
+    data”. For example: “Podarcis lilfordi (Lilford's wall lizard),
+    genomic and transcriptomic data”.
 
--   **Study Name.** TOLID prefix (eg. "rPodLil").
+-   **Study Name.** TOLID prefix (eg. “rPodLil”).
 
--   **Detailed study abstract.** "This project collects the genomic and
+-   **Detailed study abstract.** “This project collects the genomic and
     transcriptomic data generated for **species**, common name **common
     name**, to facilitate genome assembly and annotation as part of the
     Catalan Initiative for the Earth Biogenome Project
-    (<https://www.biogenoma.cat/>)." For example: "This project collects
+    (<https://www.biogenoma.cat/>).“ For example: “This project collects
     the genomic and transcriptomic data generated for Podarcis lilfordi,
-    common name Lilford's wall lizard, to facilitate genome assembly and
+    common name Lilford’s wall lizard, to facilitate genome assembly and
     annotation as part of the Catalan Initiative for the Earth Biogenome
-    Project (<https://www.biogenoma.cat/>)".
+    Project (<https://www.biogenoma.cat/>)”.
 
--   **Add Study attributes.** Click "+" and add the tag "keyword" and
-    the value "CBP". Then click Add.
+-   **Add Study attributes.** Click “+” and add the tag “keyword” and
+    the value “CBP”. Then click Add.
 
 Now you can submit the project. A new window will show up with the
-assigned project ID, that you can also check in the "Studies Report" tab
+assigned project ID, that you can also check in the “Studies Report” tab
 of the Dashboard. The project submission page should look like this:
 
-![](./media/image2.png){width="7.21017060367454in"
-height="3.759258530183727in"}
+<img src="./media/image2.png"
+style="width:7.21017in;height:3.75926in" />
 
-[Genome assembly analysis project registration]{.underline}
+<u>Genome assembly analysis project registration</u>
 
 -   **Short descriptive study title.** The structure of this should be:
-    "***Species name*** (**common name**), genome assembly, **TOLID**".
-    For example: "Podarcis lilfordi (Lilford\'s wall lizard), genome
-    assembly, rPodLil1".
+    “***Species name*** (**common name**), genome assembly, **TOLID**”.
+    For example: “Podarcis lilfordi (Lilford's wall lizard), genome
+    assembly, rPodLil1”.
 
--   **Study Name.** TOLID prefix (eg. "rPodLil").
+-   **Study Name.** TOLID prefix (eg. “rPodLil”).
 
--   **Detailed study abstract.** "This project provides the genome
+-   **Detailed study abstract.** “This project provides the genome
     assembly of **species**, common name **common name**. The assembly
     is provided by the Catalan Initiative for the Earth Biogenome
-    Project (<https://www.biogenoma.cat/>)." For example: "This project
+    Project (<https://www.biogenoma.cat/>).” For example: “This project
     provides the genome assembly of Podarcis lilfordi, common name
-    Lilford's wall lizard. The assembly is provided by the Catalan
+    Lilford’s wall lizard. The assembly is provided by the Catalan
     Initiative for the Earth Biogenome Project
-    (<https://www.biogenoma.cat/>)."
+    (<https://www.biogenoma.cat/>).”
 
--   Tick the box on "**will you provide functional genome annotation**"
+-   Tick the box on “**will you provide functional genome annotation**”
     if the assembly will be submitted with the annotation.
 
--   **Add Study attributes.** Click "+" and add the tag "keyword" and
-    the value "CBP". Then click Add.
+-   **Add Study attributes.** Click “+” and add the tag “keyword” and
+    the value “CBP”. Then click Add.
 
 -   **Add Locus tag prefix (only if it is going to be submitted with the
-    annotation).** Click "+" and add the desired locus tag. Then click
+    annotation).** Click “+” and add the desired locus tag. Then click
     Add. A locus tag prefix can contain only alpha-numeric characters,
     must be at least 3 characters long, upper case, start with a letter,
     and should not contain symbols, such as -\_\*. We recommend using
@@ -156,39 +156,39 @@ height="3.759258530183727in"}
     to the ID of each annotated feature.
 
 Now you can submit the project. A new window will show up with the
-assigned project ID, that you can also check in the "Studies Report" tab
+assigned project ID, that you can also check in the “Studies Report” tab
 of the Dashboard.
 
 The project submission page should look like this:
 
-![](./media/image3.png){width="6.55in" height="4.09375in"}
+<img src="./media/image3.png" style="width:6.55in;height:4.09375in" />
 
-[Alternate genome assembly analysis project registration]{.underline}
+<u>Alternate genome assembly analysis project registration</u>
 
 -   **Short descriptive study title.** The structure of this should be:
-    "***Species name*** (**common name**), genome assembly, **TOLID,**
-    alternate haplotype". For example: "Podarcis lilfordi (Lilford\'s
-    wall lizard), genome assembly, rPodLil1, alternate haplotype".
+    “***Species name*** (**common name**), genome assembly, **TOLID,**
+    alternate haplotype”. For example: “Podarcis lilfordi (Lilford's
+    wall lizard), genome assembly, rPodLil1, alternate haplotype”.
 
 -   **Study Name.** **TOLID prefix** alternate haplotype (eg.
-    "rPodLil").
+    “rPodLil”).
 
--   **Detailed study abstract.** "This project provides the alternate
+-   **Detailed study abstract.** “This project provides the alternate
     haplotype genome assembly of **species**, common name **common
     name**. The assembly is provided by the Catalan Initiative for the
-    Earth Biogenome Project (<https://www.biogenoma.cat/>)." For
-    example: "This project provides the alternate heplotype genome
-    assembly of Podarcis lilfordi, common name Lilford's wall lizard.
+    Earth Biogenome Project (<https://www.biogenoma.cat/>).” For
+    example: “This project provides the alternate heplotype genome
+    assembly of Podarcis lilfordi, common name Lilford’s wall lizard.
     The assembly is provided by the Catalan Initiative for the Earth
-    Biogenome Project (<https://www.biogenoma.cat/>)."
+    Biogenome Project (<https://www.biogenoma.cat/>).”
 
--   Tick the box on "**will you provide functional genome annotation**"
+-   Tick the box on “**will you provide functional genome annotation**”
     if the assembly will be annotated.
 
--   **Add Study attributes.** Click "+" and add the tag "keyword" and
-    the value "CBP". Then click Add.
+-   **Add Study attributes.** Click “+” and add the tag “keyword” and
+    the value “CBP”. Then click Add.
 
--   **Add Locus tag prefix.** Click "+" and add the desired locus tag.
+-   **Add Locus tag prefix.** Click “+” and add the desired locus tag.
     Then click Add. A locus tag prefix can contain only alpha-numeric
     characters, must be at least 3 characters long, upper case, start
     with a letter, and should not contain symbols, such as -\_\*. We
@@ -196,10 +196,10 @@ The project submission page should look like this:
     need to be added to the ID of each annotated feature.
 
 Now you can submit the project. A new window will show up with the
-assigned project ID, that you can also check in the "Studies Report" tab
+assigned project ID, that you can also check in the “Studies Report” tab
 of the Dashboard.
 
-[Species umbrella project registration]{.underline}
+<u>Species umbrella project registration</u>
 
 To link the independent projects that will contain the data of one
 species, we need to register an **umbrella project** that will become a
@@ -213,11 +213,11 @@ line, by using curl to submit XML files you have created. Following the
 ENA documentation, we will show here an example of how the xml files
 should look and which is the command to submit them.
 
-First, you need to create a "**submission.xml**" with the following
-information:\
-\
-![](./media/image4.png){width="6.739583333333333in"
-height="1.8533858267716536in"}
+First, you need to create a “**submission.xml**” with the following
+information:  
+  
+<img src="./media/image4.png"
+style="width:6.73958in;height:1.85339in" />
 
 It is good practice to provide a specific release date for an umbrella
 project using the HOLD action in the submission XML. When this date
@@ -229,16 +229,16 @@ Each child project is released independently and they each have their
 own hold date which is determined on registration, the umbrella project
 release does not determine the child project(s) release.
 
-For example, if we want the project to be private until March 31^st^
-2022, our submission.xml file would say:
+For example, if we want the project to be private until March
+31<sup>st</sup> 2022, our submission.xml file would say:
 
-\<Hold HoldUntilDate= \"2022-03-31\"/\>
+\<Hold HoldUntilDate= "2022-03-31"/\>
 
-The second xml file we need to create is named **"umbrella.xml"** and it
+The second xml file we need to create is named **“umbrella.xml”** and it
 is where we define all the details of the project.
 
-![](./media/image5.png){width="5.770833333333333in"
-height="2.8854166666666665in"}
+<img src="./media/image5.png"
+style="width:5.77083in;height:2.88542in" />
 
 Edit umbrella.xml to contain the following information:
 
@@ -247,9 +247,9 @@ Edit umbrella.xml to contain the following information:
 
 -   Title. For us, the **species name**
 
--   Description. "This project collects the sequencing data and
+-   Description. “This project collects the sequencing data and
     assemblies generated for **species name** by the Catalan Initiative
-    for the Earth Biogenome Project (<https://www.biogenoma.cat/>)."
+    for the Earth Biogenome Project (<https://www.biogenoma.cat/>).”
 
 -   Child project accessions
 
@@ -259,17 +259,18 @@ add one project at this time.
 
 If we continue with our Podarcis example, this file would look like:
 
-![](./media/image6.png){width="6.145374015748032in" height="2.90625in"}
+<img src="./media/image6.png"
+style="width:6.14537in;height:2.90625in" />
 
 When you are satisfied with the changes you have made to umbrella.xml
 you should run the following command from the directory in which both
 XML files are located:
 
 You must edit the command to include your Webin account ID and password.
-You will receive a receipt in XML form. You should note the 'success'
+You will receive a receipt in XML form. You should note the ‘success’
 attribute which will be true or false to indicate success or failure of
 your submission. If the submission was successful, the receipt will also
-contain the accessions of your project. These begin 'ERP' and 'PRJEB'.
+contain the accessions of your project. These begin ‘ERP’ and ‘PRJEB’.
 The receipt for a failed submission will contain error messages which
 will advise you on how to fix your submission.
 
@@ -283,9 +284,9 @@ Details on how to carry out read submission in any of these 3 ways can
 be found at:
 <https://ena-docs.readthedocs.io/en/latest/submit/reads.html>.
 
-All genomic and transcriptomic data, ideally in "fastq.gz" format, used
+All genomic and transcriptomic data, ideally in “fastq.gz” format, used
 in the project needs to be submitted under the data project named
-"**species name** (**common name**), genomic and transcriptomic data."
+“**species name** (**common name**), genomic and transcriptomic data.”
 
 5.  Assembly submission
 
@@ -314,7 +315,7 @@ assembly may contain a mixture of the three sequence types:
 The aim of the CBP is to obtain chromosome level assemblies, but in some
 cases this may not be possible. Also note that lower-level assemblies
 (eg. contigs or scaffolds) can be updated to chromosome-level after
-submission. The term "chromosome" in this context will include both the
+submission. The term “chromosome” in this context will include both the
 nuclear and organellar chromosomes as part of the same submission.
 
 The following instructions show how to submit a genome assembly in
@@ -338,7 +339,7 @@ genome context:
 
 -   ASSEMBLYNAME: Unique assembly name, user-provided - mandatory
 
--   ASSEMBLY_TYPE: 'clone or isolate' - mandatory
+-   ASSEMBLY_TYPE: ‘clone or isolate’ - mandatory
 
 -   COVERAGE: The estimated depth of sequencing coverage - mandatory
 
@@ -350,12 +351,12 @@ genome context:
 -   MINGAPLENGTH: Minimum length of consecutive Ns to be considered a
     > gap - optional
 
--   MOLECULETYPE: 'genomic DNA', 'genomic RNA' or 'viral cRNA'
+-   MOLECULETYPE: ‘genomic DNA’, ‘genomic RNA’ or ‘viral cRNA’
     > - optional
 
 -   DESCRIPTION: Free text description of the genome assembly - optional
 
--   RUN_REF: Comma separated list of run accession(s) -- optional
+-   RUN_REF: Comma separated list of run accession(s) – optional
 
 Various file name fields are supported in the manifest file. Note that
 all of these are optional, though of course at least one must be
@@ -385,13 +386,13 @@ file should be produced and submitted with the FLATFILE option. This
 embl file needs to follow the ENA format recommendations
 (<https://ena-docs.readthedocs.io/en/latest/submit/fileprep/assembly.html#flat-file>).
 
-The [CHROMOSOME_LIST]{.underline} file must be provided when the
-submission contains assembled chromosomes. The file is a tab separated
-text file (USASCII7) up to four columns.
+The <u>CHROMOSOME_LIST</u> file must be provided when the submission
+contains assembled chromosomes. The file is a tab separated text file
+(USASCII7) up to four columns.
 
 -   **OBJECT_NAME (first column):** The unique sequence name, matching
-    with the sequence name in your FASTA file ('\>' line) or EMBL flat
-    file ('AC \* ' line).
+    with the sequence name in your FASTA file (‘\>’ line) or EMBL flat
+    file (‘AC \* ‘ line).
 
 -   **CHROMOSOME_NAME (second column):** The chromosome name. The value
     will appear as the /chromosome, /plasmid or /segment qualifier in
@@ -399,7 +400,7 @@ text file (USASCII7) up to four columns.
     that this field should contain, check the ENA link pasted before for
     details. We recommend this to be a **number**, if the chromosome
     number is known. In case the mitochondrial genome is submitted, its
-    value can be "**MIT**".
+    value can be “**MIT**”.
 
 -   **CHROMOSOME_TYPE (third column):** Allowed values:
 
@@ -420,13 +421,13 @@ text file (USASCII7) up to four columns.
     prokaryotic chromosomes and plasmids in the cytoplasm. Check the
     possible values in the ENA page.
 
-The [UNLOCALISED LIST]{.underline} file should be provided when the
-submission contains chromosomes with unlocalised sequences. Unlocalised
-sequences are contigs or scaffolds that are associated with a specific
-chromosome but for which order and orientation is unknown. An example
-unlocalised list file:
+The <u>UNLOCALISED LIST</u> file should be provided when the submission
+contains chromosomes with unlocalised sequences. Unlocalised sequences
+are contigs or scaffolds that are associated with a specific chromosome
+but for which order and orientation is unknown. An example unlocalised
+list file:
 
-![](./media/image7.png){width="2.375in" height="0.9444444444444444in"}
+<img src="./media/image7.png" style="width:2.375in;height:0.94444in" />
 
 The unlocalised list file is a tab separated text file (USASCII7)
 containing the following columns:
@@ -438,8 +439,8 @@ containing the following columns:
     associated with this sequence. This must match with a
     CHROMOSOME_NAME in the chromosome list file.
 
-The [AGP]{.underline} file might be used to describe the assembly of
-scaffolds from contigs or of chromosomes from scaffolds.
+The <u>AGP</u> file might be used to describe the assembly of scaffolds
+from contigs or of chromosomes from scaffolds.
 
 Once all the files needed for assembly submission are ready, they need
 to be validated, uploaded and submitted using the [Webin command line
