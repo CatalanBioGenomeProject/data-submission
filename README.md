@@ -14,11 +14,12 @@ the projects should have.
 1. [ TAXID Registration. ](#taxid)
 2. [ TOLID Registration. ](#tolid)
 3. [ Sample Registration. ](#sample)
-4. [ Project Registration. ](#project)
-5. [ Reads Submission. ](#reads)
-6. [ Assembly Submission. ](#assembly)
-7. [ GoaT Report. ](#goat)
-8. [ Data Portal. ](#portal)
+4. [ ENA Submission scripts](#submission)
+5. [ Project Registration. ](#project)
+6. [ Reads Submission. ](#reads)
+7. [ Assembly Submission. ](#assembly)
+8. [ GoaT Report. ](#goat)
+9. [ Data Portal. ](#portal)
 
 
 ---
@@ -82,6 +83,10 @@ spreadsheet. This should be submit via COPO. We are still negotiating
 with Rob Davey how to approve users for the CBP and who will approve the
 submissions (currently a small group from ERGA direction is in charge).
 
+<a name="submission"></a>
+## ENA submission scripts
+
+Some scripts to help in data submission have been provided, to use them please read [these instructions](https://github.com/cnag-aat/ERGA-submission/tree/main/get_submission_xmls#readme)
 
 <a name="project"></a>
 ## Create data projects
