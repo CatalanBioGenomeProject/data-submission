@@ -115,7 +115,9 @@ In order to be able to submit your own data, please make sure that you have the 
 <a name="reads"></a>
 ##  Transferring the reads
 
-Below we provide instructions on how to submit all the metadata related to the project, but in order for the submission to work, you first need to upload data files into your private Webin file upload area at EMBL-EBI. Please check instructions on how to transfer the files at: <https://ena-docs.readthedocs.io/en/latest/submit/fileprep/upload.html>. Our recommended way of doing this is by using the Aspera ascp command line program (<https://ena-docs.readthedocs.io/en/latest/submit/fileprep/upload.html#using-aspera-ascp-command-line-program>)
+Below we provide instructions on how to submit all the metadata related to the project, but in order for the submission to work, you first need to upload data files into your private Webin file upload area at EMBL-EBI. Please check instructions on how to transfer the files at: <https://ena-docs.readthedocs.io/en/latest/submit/fileprep/upload.html>. 
+
+Our recommended way of doing this is by using the Aspera ascp command line program (<https://ena-docs.readthedocs.io/en/latest/submit/fileprep/upload.html#using-aspera-ascp-command-line-program>)
 
 <a name="metadata"></a>
 ##  Metadata submission
@@ -135,7 +137,7 @@ This command would produce the folowing files:
 
 To submit these files to the ENA, you can execute the following curl command:
 
-```` curl -u Webin-XXXX:password -F "SUBMISSION=@submission.xml" -F "PROJECT=@ilCoeGlyc_pilot_cbp.study.xml" -F "EXPERIMENT=@ilCoeGlyc_pilot.exp.xml" -F "RUN=@ilCoeGlyc_pilot.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/" ```
+``` curl -u Webin-XXXX:password -F "SUBMISSION=@submission.xml" -F "PROJECT=@ilCoeGlyc_pilot_cbp.study.xml" -F "EXPERIMENT=@ilCoeGlyc_pilot.exp.xml" -F "RUN=@ilCoeGlyc_pilot.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/" ```
 
 Also note that you can try submitting to the development server first, to check that everything is okay before moving on with the submission. To submit to the development server, just replace the url in the previous command with: "https://wwwdev.ebi.ac.uk/ena/submit/drop-box/submit/". More details on how to submit xml files programmatically can be found at: <https://ena-docs.readthedocs.io/en/latest/submit/reads/programmatic.html>. 
 
@@ -163,9 +165,7 @@ A run example would be:
 
 This command will produce the umbrella.xml file that you can then submit like the other xml files: 
 
-```` curl -u Webin-XXXX:password -F "SUBMISSION=@submission.xml" -F "PROJECT=@umbrella.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/" 
-
-````
+``` curl -u Webin-XXXX:password -F "SUBMISSION=@submission.xml" -F "PROJECT=@umbrella.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/" ```
 
 <a name="assembly"></a>
 ##  Assembly submission
@@ -331,7 +331,7 @@ interface](https://ena-docs.readthedocs.io/en/latest/submit/general-guide/webin-
 for full information about the submission process.
 
 <a name="link"></a>
-##Notify CBP 
+## Notify CBP 
 
 Once your submission is complete, you should notify it to the CBP by filling in the following form: <https://forms.gle/Ltg6PDS6xwKNec2f6>. This will allow us to review the quality of the assembly and add your project as a child to the CBP umbrella. 
 
@@ -361,5 +361,3 @@ The [data portal](https://dades.biogenoma.cat/) collates the INSDC metadata with
 - If you have any image of the collected species that you want to put in the data portal. First publish this image into Zenodo, Wikimedia or any other public images database, then provide the link to <a href="mailto:emilio.righi@crg.eu">Emilio Righi</a>
 - Any other relevant information of the collected species can also be provided, catalan name, etc (Note that this are the species metadata and not the sample metadata)
 - The portal has also a genome browser where the genome annotation of the sequences species can be visualized, but it is first necessary to publish the genome assembly, chromosome level, to INSDC. If this is your case you can provide <a href="mailto:emilio.righi@crg.eu">Emilio Righi</a> with genome annotation files in the following formats: the gzipped gff (gff.gz) and the tabindexed gzipped gff (gff.gz.tbi)
-
-
