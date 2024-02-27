@@ -156,7 +156,7 @@ The submission.xml should look like this:
 </SUBMISSION>
 ````
 
-<u>Species umbrella project registration</u>
+<u>**Species umbrella project registration**</u>
 
 The **get_umbrella_xml_ENA.py** script can produce the xml file required to register the umbrella project of your species. If you specify the option (**--project CBP**), the generated xml file will follow the metadata requirements for the CBP. You need to specify the taxonomic description of your species and the accesion ids of the projects that were created in the previous step. 
 
