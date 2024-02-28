@@ -167,10 +167,15 @@ This command will produce the umbrella.xml file that you can then submit like th
 
 ``` curl -u Webin-XXXX:password -F "SUBMISSION=@submission.xml" -F "PROJECT=@umbrella.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/" ```
 
+<a name="link"></a>
+## Notify CBP 
+
+Once you consider your assembly is complete and you have completed the steps described above, you should notify to the CBP by filling in the following form: <https://forms.gle/Ltg6PDS6xwKNec2f6>. There we ask for the umbrella project id, some of the assembly details and a pdf with an **EAR Report**. To produce this pdf report you must run the code found at <https://github.com/ERGA-consortium/EARs>. This will allow us to review the quality of the assembly and add your project as a child to the CBP umbrella. 
+
 <a name="assembly"></a>
 ##  Assembly submission
 
-After completing the steps described above, a genome assembly can
+After completing the steps described above and receiving a go ahead from the CBP, a genome assembly can
 be submitted. This submission will refer to a project (the project for
 the assembly that we registered before), a sample, and one or more runs.
 The genome assembly can be submitted to the ENA annotated or
@@ -329,11 +334,6 @@ interface](https://ena-docs.readthedocs.io/en/latest/submit/general-guide/webin-
 Please refer to the [Webin command line submission
 interface](https://ena-docs.readthedocs.io/en/latest/submit/general-guide/webin-cli.html) documentation
 for full information about the submission process.
-
-<a name="link"></a>
-## Notify CBP 
-
-Once your submission is complete, you should notify it to the CBP by filling in the following form: <https://forms.gle/Ltg6PDS6xwKNec2f6>. This will allow us to review the quality of the assembly and add your project as a child to the CBP umbrella. 
 
 <a name="goat"></a>
 ##  GoaT Report
