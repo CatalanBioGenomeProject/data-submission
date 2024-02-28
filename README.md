@@ -17,8 +17,8 @@ the projects should have.
 4. [ Project structure. ](#project)
 5. [ Transferring the reads. ](#reads)
 6. [ Metadata submission. ](#metadata)
-7. [ Assembly Submission. ](#assembly)
-8. [ Notify CBP ](#link)
+7. [ Notify CBP ](#link)
+8. [ Assembly Submission. ](#assembly)
 9. [ GoaT Report. ](#goat)
 10. [ Data Portal. ](#portal)
 
