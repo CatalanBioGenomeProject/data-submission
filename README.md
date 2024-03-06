@@ -14,16 +14,15 @@ the projects should have.
 1. [ TAXID Registration. ](#taxid)
 2. [ TOLID Registration. ](#tolid)
 3. [ Sample Registration. ](#sample)
-4. [ ENA Submission scripts](#submission)
-5. [ Project Registration. ](#project)
-6. [ Reads Submission. ](#reads)
-7. [ Assembly Submission. ](#assembly)
-8. [ GoaT Report. ](#goat)
-9. [ Data Portal. ](#portal)
-
+4. [ Project structure. ](#project)
+5. [ Transferring the reads. ](#reads)
+6. [ Metadata submission. ](#metadata)
+7. [ Notify CBP ](#link)
+8. [ Assembly Submission. ](#assembly)
+9. [ GoaT Report. ](#goat)
+10. [ Data Portal. ](#portal)
 
 ---
-
 
 
 <img src="./media/image1.png"
@@ -32,7 +31,9 @@ style="width:6.69792in;height:5.28856in" />
 <a name="taxid"></a>
 ## Register a new TaxID
 
-if the species does not have a taxonomic identifier, you must follow the instructions in this [link](https://ena-docs.readthedocs.io/en/latest/faq/taxonomy_requests.html) before you can proceed with the next steps
+If the species does not have a taxonomic identifier, you must follow the instructions 
+in this [link](https://ena-docs.readthedocs.io/en/latest/faq/taxonomy_requests.html) 
+before you can proceed with the next steps.
 
 
 <a name="tolid"></a>
@@ -66,7 +67,7 @@ ToLID and add .\<version\> Examples:
     Astatotilapia calliptera)
 
 A TOLID for the individual used for genome assembly should be registered
-by the sample ambassador in the first place. To read more about TOLIDs
+by the person responsible for the sample in the first place. To read more about TOLIDs
 and register yours, go to the following link:
 <https://id.tol.sanger.ac.uk/.>
 
@@ -89,7 +90,7 @@ submissions (currently a small group from ERGA direction is in charge).
 Some scripts to help in data submission have been provided, to use them please read [these instructions](https://github.com/cnag-aat/ERGA-submission/tree/main/get_submission_xmls#readme)
 
 <a name="project"></a>
-## Create data projects
+## Project structure
 
 We will adopt the project structure followed by the DToL. For this
 purpose, separate projects for the different types of data should be
@@ -104,230 +105,80 @@ registered:
 4.  Species overview umbrella project with the data and analysis
     projects as children.
 
-The projects can be registered either to the ENA or the NCBI, but we
-will describe here how to do it in the ENA. The CNAG can broker all CBP
+The projects can be registered either to the ENA or the NCBI, 
+but here we provide scripts that will automatically generate the files needed to register the studies in the ENA.
+Please note that the CNAG can broker all CBP
 submissions but, if desired, data submission can also be done by the
 team responsible for the species. However, command line experience is
 recommended, given that some of the steps can only be done
 programmatically.
 
-The first step to submit the data is to access the Webin interface with
-your ENA/EGA user credentials
-(<https://www.ebi.ac.uk/ena/submit/webin/login>). Please, register if
-you do not have an account yet.
-
-Once you are logged in into the system you can register the data and
-analysis projects by clicking “Register Study (project)” on the
-Dashboard. Description on how to fill all the fields for CBP projects is
-given below, please, go to
-<https://ena-docs.readthedocs.io/en/latest/submit/study.html> for
-general details on how to register a project.
-
-The **release date** indicates when the study and all its data will be
-made public. When first registering a project, it can be as much as 2
-years beyond the present date but you can change it at any time to make
-it sooner or later. Once the data becomes public you may not make it
-private again.
-
-<u>Data Project registration</u>
-
--   **Short descriptive study title.** The structure of this should be:
-    “***Species name*** (**common name**), genomic and transcriptomic
-    data”. For example: “Podarcis lilfordi (Lilford's wall lizard),
-    genomic and transcriptomic data”.
-
--   **Study Name.** TOLID prefix (eg. “rPodLil”).
-
--   **Detailed study abstract.** “This project collects the genomic and
-    transcriptomic data generated for **species**, common name **common
-    name**, to facilitate genome assembly and annotation as part of the
-    Catalan Initiative for the Earth Biogenome Project
-    (<https://www.biogenoma.cat/>).“ For example: “This project collects
-    the genomic and transcriptomic data generated for Podarcis lilfordi,
-    common name Lilford’s wall lizard, to facilitate genome assembly and
-    annotation as part of the Catalan Initiative for the Earth Biogenome
-    Project (<https://www.biogenoma.cat/>)”.
-
--   **Add Study attributes.** Click “+” and add the tag “keyword” and
-    the value “CBP”. Then click Add.
-
-Now you can submit the project. A new window will show up with the
-assigned project ID, that you can also check in the “Studies Report” tab
-of the Dashboard. The project submission page should look like this:
-
-<img src="./media/image2.png"
-style="width:7.21017in;height:3.75926in" />
-
-<u>Genome assembly analysis project registration</u>
-
--   **Short descriptive study title.** The structure of this should be:
-    “***Species name*** (**common name**), genome assembly, **TOLID**”.
-    For example: “Podarcis lilfordi (Lilford's wall lizard), genome
-    assembly, rPodLil1”.
-
--   **Study Name.** TOLID prefix (eg. “rPodLil”).
-
--   **Detailed study abstract.** “This project provides the genome
-    assembly of **species**, common name **common name**. The assembly
-    is provided by the Catalan Initiative for the Earth Biogenome
-    Project (<https://www.biogenoma.cat/>).” For example: “This project
-    provides the genome assembly of Podarcis lilfordi, common name
-    Lilford’s wall lizard. The assembly is provided by the Catalan
-    Initiative for the Earth Biogenome Project
-    (<https://www.biogenoma.cat/>).”
-
--   Tick the box on “**will you provide functional genome annotation**”
-    if the assembly will be submitted with the annotation.
-
--   **Add Study attributes.** Click “+” and add the tag “keyword” and
-    the value “CBP”. Then click Add.
-
--   **Add Locus tag prefix (only if it is going to be submitted with the
-    annotation).** Click “+” and add the desired locus tag. Then click
-    Add. A locus tag prefix can contain only alpha-numeric characters,
-    must be at least 3 characters long, upper case, start with a letter,
-    and should not contain symbols, such as -\_\*. We recommend using
-    the specimen TOLID (eg. RPODLIL1). This prefix will need to be added
-    to the ID of each annotated feature.
-
-Now you can submit the project. A new window will show up with the
-assigned project ID, that you can also check in the “Studies Report” tab
-of the Dashboard.
-
-The project submission page should look like this:
-
-<img src="./media/image3.png" style="width:6.55in;height:4.09375in" />
-
-<u>Alternate genome assembly analysis project registration</u>
-
--   **Short descriptive study title.** The structure of this should be:
-    “***Species name*** (**common name**), genome assembly, **TOLID,**
-    alternate haplotype”. For example: “Podarcis lilfordi (Lilford's
-    wall lizard), genome assembly, rPodLil1, alternate haplotype”.
-
--   **Study Name.** **TOLID prefix** alternate haplotype (eg.
-    “rPodLil”).
-
--   **Detailed study abstract.** “This project provides the alternate
-    haplotype genome assembly of **species**, common name **common
-    name**. The assembly is provided by the Catalan Initiative for the
-    Earth Biogenome Project (<https://www.biogenoma.cat/>).” For
-    example: “This project provides the alternate heplotype genome
-    assembly of Podarcis lilfordi, common name Lilford’s wall lizard.
-    The assembly is provided by the Catalan Initiative for the Earth
-    Biogenome Project (<https://www.biogenoma.cat/>).”
-
--   Tick the box on “**will you provide functional genome annotation**”
-    if the assembly will be annotated.
-
--   **Add Study attributes.** Click “+” and add the tag “keyword” and
-    the value “CBP”. Then click Add.
-
--   **Add Locus tag prefix.** Click “+” and add the desired locus tag.
-    Then click Add. A locus tag prefix can contain only alpha-numeric
-    characters, must be at least 3 characters long, upper case, start
-    with a letter, and should not contain symbols, such as -\_\*. We
-    recommend using the specimen TOLID (eg. RPODLIL1). This prefix will
-    need to be added to the ID of each annotated feature.
-
-Now you can submit the project. A new window will show up with the
-assigned project ID, that you can also check in the “Studies Report” tab
-of the Dashboard.
-
-<u>Species umbrella project registration</u>
-
-To link the independent projects that will contain the data of one
-species, we need to register an **umbrella project** that will become a
-child of the CBP project and will have as children the data and assembly
-projects of that species.
-
-Instructions on how to register umbrella projects can be found at
-<https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html>. As stated
-there, umbrella studies can only be created and updated from the command
-line, by using curl to submit XML files you have created. Following the
-ENA documentation, we will show here an example of how the xml files
-should look and which is the command to submit them.
-
-First, you need to create a “**submission.xml**” with the following
-information:  
-  
-<img src="./media/image4.png"
-style="width:6.73958in;height:1.85339in" />
-
-It is good practice to provide a specific release date for an umbrella
-project using the HOLD action in the submission XML. When this date
-arrives, the umbrella project will become public automatically. However,
-this is optional and if not provided, the release date defaults to two
-years after registration.
-
-Each child project is released independently and they each have their
-own hold date which is determined on registration, the umbrella project
-release does not determine the child project(s) release.
-
-For example, if we want the project to be private until March
-31<sup>st</sup> 2022, our submission.xml file would say:
-
-\<Hold HoldUntilDate= "2022-03-31"/\>
-
-The second xml file we need to create is named **“umbrella.xml”** and it
-is where we define all the details of the project.
-
-<img src="./media/image5.png"
-style="width:5.77083in;height:2.88542in" />
-
-Edit umbrella.xml to contain the following information:
-
--   Alias (a unique, informative name for your project). In our case,
-    the **TOLID**.
-
--   Title. For us, the **species name**
-
--   Description. “This project collects the sequencing data and
-    assemblies generated for **species name** by the Catalan Initiative
-    for the Earth Biogenome Project (<https://www.biogenoma.cat/>).”
-
--   Child project accessions
-
-You can add more child projects by inserting more \<RELATED_PROJECT\>
-blocks, or you can remove a block from this example if you only wish to
-add one project at this time.
-
-If we continue with our Podarcis example, this file would look like:
-
-<img src="./media/image6.png"
-style="width:6.14537in;height:2.90625in" />
-
-When you are satisfied with the changes you have made to umbrella.xml
-you should run the following command from the directory in which both
-XML files are located:
-
-You must edit the command to include your Webin account ID and password.
-You will receive a receipt in XML form. You should note the ‘success’
-attribute which will be true or false to indicate success or failure of
-your submission. If the submission was successful, the receipt will also
-contain the accessions of your project. These begin ‘ERP’ and ‘PRJEB’.
-The receipt for a failed submission will contain error messages which
-will advise you on how to fix your submission.
+In order to be able to submit your own data, please make sure that you have the credentials of your ENA account or create one if you do not have one (<https://www.ebi.ac.uk/ena/submit/webin/accountInfo>). 
 
 <a name="reads"></a>
-##  Read submission
+##  Transferring the reads
 
-After registering the study and samples, you can submit the reads
-referring to them. Note that samples and studies will only be associated
-after experiments have been submitted. Raw read submissions can be
-performed either interactively, programmatically or via webin-cli.
-Details on how to carry out read submission in any of these 3 ways can
-be found at:
-<https://ena-docs.readthedocs.io/en/latest/submit/reads.html>.
+Below we provide instructions on how to submit all the metadata related to the project, but in order for the submission to work, you first need to upload data files into your private Webin file upload area at EMBL-EBI. Please check instructions on how to transfer the files at: <https://ena-docs.readthedocs.io/en/latest/submit/fileprep/upload.html>. 
 
-All genomic and transcriptomic data, ideally in “fastq.gz” format, used
-in the project needs to be submitted under the data project named
-“**species name** (**common name**), genomic and transcriptomic data.”
+Our recommended way of doing this is by using the Aspera ascp command line program (<https://ena-docs.readthedocs.io/en/latest/submit/fileprep/upload.html#using-aspera-ascp-command-line-program>)
+
+<a name="metadata"></a>
+##  Metadata submission
+
+Python scripts to generate the xml files that are required to register the projects and reads of a species in the ENA have been developed and can be downloaded from (<https://github.com/ERGA-consortium/ERGA-submission/tree/main/get_submission_xmls>). In order to run them you need to have python3 with the JINJA2 module installed in your system. 
+
+The **get_ENA_xml_files.py** script can produce the xml files that are required to register the projects and reads (experiments and/or runs) in the ENA. If you specify the option (**--project CBP**), the generated xml files will follow the metadata requirements for the CBP. To provide the information you must give a tabular file with the **-f** option. Please check the examples directory to see which fields this file should contain. 
+
+A run example would be: 
+ ``` ~/ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f runs.ilCoeGlyc.txt -p CBP -o ilCoeGlyc_cbp ```
+
+This command would produce the folowing files: 
+
+- ilCoeGlyc_cbp.study.xml
+- ilCoeGlyc_cbp.exp.xml
+- ilCoeGlyc_cbp.runs.xml
+
+To submit these files to the ENA, you can execute the following curl command:
+
+``` curl -u Webin-XXXX:password -F "SUBMISSION=@submission.xml" -F "PROJECT=@ilCoeGlyc_pilot_cbp.study.xml" -F "EXPERIMENT=@ilCoeGlyc_pilot.exp.xml" -F "RUN=@ilCoeGlyc_pilot.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/" ```
+
+Also note that you can try submitting to the development server first, to check that everything is okay before moving on with the submission. To submit to the development server, just replace the url in the previous command with: "https://wwwdev.ebi.ac.uk/ena/submit/drop-box/submit/". More details on how to submit xml files programmatically can be found at: <https://ena-docs.readthedocs.io/en/latest/submit/reads/programmatic.html>. 
+
+The submission.xml should look like this:
+
+````
+<SUBMISSION>
+    <ACTIONS>
+        <ACTION>
+            <ADD/>
+        </ACTION>
+        <ACTION>
+            <RELEASE/>
+        </ACTION>
+    </ACTIONS>
+</SUBMISSION>
+````
+
+<u>**Species umbrella project registration**</u>
+
+The **get_umbrella_xml_ENA.py** script can produce the xml file required to register the umbrella project of your species. If you specify the option (**--project CBP**), the generated xml file will follow the metadata requirements for the CBP. You need to specify the taxonomic description of your species and the accesion ids of the projects that were created in the previous step. 
+
+A run example would be: 
+ ```~/ERGA-submission/get_submission_xmls/get_umbrella_xml_ENA.py -s "Coenonympha glycerion" -t ilCoeGlyc1 -n "Lleonada de muntanya, chestnut heath butterfly"  -p CBP -a PRJEB71110 PRJEB71111 -x 242261 ```
+
+This command will produce the umbrella.xml file that you can then submit like the other xml files: 
+
+``` curl -u Webin-XXXX:password -F "SUBMISSION=@submission.xml" -F "PROJECT=@umbrella.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/" ```
+
+<a name="link"></a>
+## Notify CBP 
+
+Once you consider your assembly is complete and you have completed the steps described above, you should notify to the CBP by filling in the following form: <https://forms.gle/Ltg6PDS6xwKNec2f6>. There we ask for the umbrella project id, some of the assembly details and a pdf with an **EAR Report**. To produce this pdf report you must run the code found at <https://github.com/ERGA-consortium/EARs>. This will allow us to review the quality of the assembly and add your project as a child to the CBP umbrella. 
 
 <a name="assembly"></a>
 ##  Assembly submission
 
-After registering the projects, samples and runs, a genome assembly can
+After completing the steps described above and receiving a go ahead from the CBP, a genome assembly can
 be submitted. This submission will refer to a project (the project for
 the assembly that we registered before), a sample, and one or more runs.
 The genome assembly can be submitted to the ENA annotated or
@@ -398,7 +249,7 @@ genome context:
 Various file name fields are supported in the manifest file. Note that
 all of these are optional, though of course at least one must be
 provided, and some may only be relevant in the presence of other file
-types. The available fields are as follows:
+types. The available fields are as follow:
 
 -   FASTA: sequences in fasta format
 
@@ -513,5 +364,3 @@ The [data portal](https://dades.biogenoma.cat/) collates the INSDC metadata with
 - If you have any image of the collected species that you want to put in the data portal. First publish this image into Zenodo, Wikimedia or any other public images database, then provide the link to <a href="mailto:emilio.righi@crg.eu">Emilio Righi</a>
 - Any other relevant information of the collected species can also be provided, catalan name, etc (Note that this are the species metadata and not the sample metadata)
 - The portal has also a genome browser where the genome annotation of the sequences species can be visualized, but it is first necessary to publish the genome assembly, chromosome level, to INSDC. If this is your case you can provide <a href="mailto:emilio.righi@crg.eu">Emilio Righi</a> with genome annotation files in the following formats: the gzipped gff (gff.gz) and the tabindexed gzipped gff (gff.gz.tbi)
-
-
