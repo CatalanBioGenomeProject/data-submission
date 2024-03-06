@@ -22,7 +22,6 @@ the projects should have.
 9. [ GoaT Report. ](#goat)
 10. [ Data Portal. ](#portal)
 
-
 ---
 
 
@@ -85,6 +84,10 @@ spreadsheet. This should be submit via COPO. We are still negotiating
 with Rob Davey how to approve users for the CBP and who will approve the
 submissions (currently a small group from ERGA direction is in charge).
 
+<a name="submission"></a>
+## ENA submission scripts
+
+Some scripts to help in data submission have been provided, to use them please read [these instructions](https://github.com/cnag-aat/ERGA-submission/tree/main/get_submission_xmls#readme)
 
 <a name="project"></a>
 ## Project structure
