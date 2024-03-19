@@ -345,11 +345,13 @@ for full information about the submission process.
 From the CBP we generate a [report](https://docs.google.com/document/d/1v07sLdzDiWF5Pge4hYUd67wQ-dXTWK7EMRTp0i0vlD8/edit#heading=h.r98o47b47e3u) that updates GoaT, thus the EBP, with our sequencing progresses.
 The report is generated from the [portal](https://dades.biogenoma.cat/status) and <a href="mailto:emilio.righi@crg.eu">Emilio Righi</a> is in charge of it.
 
-**It is very important to send an email to him to update the sequencing status of the species when:**
+Since March 2023, users are responsible to update their data in the CBP portal. Contact <a href="mailto:emilio.righi@crg.eu">Emilio Righi</a> and he will create a user for you. In case your species is already present in the portal, report also the species name in the email, in this way you will be granted permissions to modify it.
+
+**Update the sequencing status of the species when:**
 
 - the sequencing data of the species are not yet submitted to INSDC or are submitted but with an embargo (they are not public yet)
 - a paper related to the sequenced species is published
-- the sequencing status of the species is updated, for instance the DNA has been sequenced etc.
+- the sequencing status of the species changes, for instance the DNA has been sequenced etc.
 
 The portal will retrieve all the data published to INSDC under the CBP umbrella, this means that it is not necessary to update Emilio if the data are already public, the process is automatized!
 
