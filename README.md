@@ -19,7 +19,7 @@ style="width:6.69792in;height:5.28856in" />
 
 ---
 <a name="sample"></a>
-## 1. Sample Registration
+## 1 Sample Registration
 
 ### 1.1 Registering a New TaxID
 
