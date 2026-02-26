@@ -11,10 +11,8 @@ style="width:6.69792in;height:5.28856in" />
 
 **Table of Contents**
 
-1. [ TAXID Registration. ](#taxid)
-2. [ TOLID Registration. ](#tolid)
-3. [ Sample Registration. ](#sample)
-4. [ Project structure. ](#project)
+1. [ Sample Registration. ](#sample)
+2. [ Raw Reads submission. ](#reads)
 5. [ Transferring the reads. ](#reads)
 6. [ Metadata submission. ](#metadata)
 7. [ Notify CBP ](#link)
@@ -23,15 +21,13 @@ style="width:6.69792in;height:5.28856in" />
 10. [ Data Portal. ](#portal)
 
 ---
-
+<a name="sample"></a>
 ## Sample Registration
 
-<a name="taxid"></a>
 ### Registering a New TaxID
 
-If the species does not yet have a taxonomic identifier (TaxID), you must follow the instructions in [this link](https://id.tol.sanger.ac.uk/) before proceeding with subsequent steps.
+If the species does not yet have a taxonomic identifier (TaxID), you must follow the instructions in [this link](https://ena-docs.readthedocs.io/en/latest/faq/taxonomy_requests.html) before proceeding with subsequent steps.
 
-<a name="tolid"></a>
 ### Obtaining a TOLID
 
 A TOLID is a unique identifier assigned to an individual specimen sampled for genome assembly. It consists of a species-specific prefix followed by a numerical identifier indicating the sampled individual. The numerical component is assigned sequentially upon request and does not imply ranking or priority.
@@ -43,12 +39,12 @@ For genome assembly naming, we recommend using the full TOLID followed by a vers
 
 TOLIDs for all individuals planned for sequencing should be registered in advance by the person responsible for the sample. Additional information and registration can be found at: [TOLID Registration](https://id.tol.sanger.ac.uk/).
 
-<a name="sample"></a>
 ### Registering Samples via the CBP Portal
 
 All samples must have an assigned BioSample accession number prior to sequencing. Sample registration can be completed through the CBP Data Portal in accordance with the provided [guidelines] (https://www.biogenoma.cat/wp-content/uploads/2025/06/Guia_Portal_CBP_ENG.pdf).
 
-## Submit Raw Reads to ENA
+<a name="sample"></a>
+## Raw Reads submission
 
 Please note that CNAG can act as a broker for all CBP data submissions. Alternatively, submission may be carried out directly by the research team responsible for the species. However, prior experience with command-line environments is strongly recommended, as certain steps in the submission process can only be performed programmatically.
 
