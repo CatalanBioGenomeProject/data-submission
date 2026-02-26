@@ -56,7 +56,7 @@ Some scripts to assist in data submission have been provided. Please read the ac
 
 ### 2.2 Create a Species Umbrella BioProject
 
-An umbrella BioProject must be registered for each species assembled by the CBP. This umbrella BioProject will serve as the parent project for all data and assembly BioProjects associated with that species and will be a direct child of the CBP BioProject (PRJEB49670). For reference, please consult PRJEB56817 as an example of an umbrella BioProject. You can use this script to obtain an XML file that can be submitted to the ENA in order to create the umbrella project. Once you obtain the accession number, please report it via [this form](#) so we can add your project under the CBP.
+An umbrella BioProject must be registered for each species assembled by the CBP. This umbrella BioProject will serve as the parent project for all data and assembly BioProjects associated with that species and will be a direct child of the CBP BioProject ([PRJEB49670](https://www.ebi.ac.uk/ena/browser/view/PRJEB49670)). For reference, please consult [PRJEB56817](https://www.ebi.ac.uk/ena/browser/view/PRJEB56817) as an example of an umbrella BioProject. You can use [this script](https://github.com/cnag-aat/ERGA-submission/blob/main/get_submission_xmls/get_umbrella_xml_ENA.py) to obtain an XML file that can be submitted to the ENA in order to create the umbrella project. Once you obtain the accession number, please report it via [this form](https://forms.gle/Ltg6PDS6xwKNec2f6) so we can add your project under the CBP.
 
 ### 2.3 Create a Read Data BioProject
 
