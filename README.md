@@ -13,22 +13,19 @@ style="width:6.69792in;height:5.28856in" />
 
 1. [ Sample Registration. ](#sample)
 2. [ Raw Reads submission. ](#reads)
-5. [ Transferring the reads. ](#reads)
-6. [ Metadata submission. ](#metadata)
-7. [ Notify CBP ](#link)
-8. [ Assembly Submission. ](#assembly)
-9. [ GoaT Report. ](#goat)
-10. [ Data Portal. ](#portal)
+3. [ Assembly Submission. ](#assembly)
+4. [ GoaT Report. ](#goat)
+5. [ Data Portal. ](#portal)
 
 ---
 <a name="sample"></a>
-## Sample Registration
+## 1. Sample Registration
 
-### Registering a New TaxID
+### 1.1 Registering a New TaxID
 
 If the species does not yet have a taxonomic identifier (TaxID), you must follow the instructions in [this link](https://ena-docs.readthedocs.io/en/latest/faq/taxonomy_requests.html) before proceeding with subsequent steps.
 
-### Obtaining a TOLID
+### 1.2 Obtaining a TOLID
 
 A TOLID is a unique identifier assigned to an individual specimen sampled for genome assembly. It consists of a species-specific prefix followed by a numerical identifier indicating the sampled individual. The numerical component is assigned sequentially upon request and does not imply ranking or priority.
 
@@ -39,12 +36,12 @@ For genome assembly naming, we recommend using the full TOLID followed by a vers
 
 TOLIDs for all individuals planned for sequencing should be registered in advance by the person responsible for the sample. Additional information and registration can be found at: [TOLID Registration](https://id.tol.sanger.ac.uk/).
 
-### Registering Samples via the CBP Portal
+### 1.3 Registering Samples via the CBP Portal
 
 All samples must have an assigned BioSample accession number prior to sequencing. Sample registration can be completed through the CBP Data Portal in accordance with the provided [guidelines](https://www.biogenoma.cat/wp-content/uploads/2025/06/Guia_Portal_CBP_ENG.pdf).
 
-<a name="sample"></a>
-## Raw Reads submission
+<a name="reads"></a>
+## 2 Raw Reads submission
 
 Please note that CNAG can act as a broker for all CBP data submissions. Alternatively, submission may be carried out directly by the research team responsible for the species. However, prior experience with command-line environments is strongly recommended, as certain steps in the submission process can only be performed programmatically.
 
@@ -70,15 +67,17 @@ Now that we have created the BioProjects, we need to populate them with the data
 
 Now we can submit all the metadata related to the reads and experiments and finalize the data submission. You can perform this step directly from the ENA Webin website or programmatically with XML files. To aid in the programmatic submission, we provide a series of Python scripts that will generate the XML files for submission starting from a tabular file with the metadata ([`get_submission_xmls`](https://github.com/cnag-aat/ERGA-submission/tree/main/get_submission_xmls)). Remember to provide the option `-p CBP` to create the projects with the CBP-specific template.
 
-## Assemble the Genome
+<a name="assembly"></a>
+## 3 Genome assembly
+### 3.1 Assemble the Genome
 
 Our aim is to obtain high-quality reference genomes following the EBP/ERGA best practice standards. Ideally, the genome should be assembled into chromosomes with Hi-C, and manual curation should be performed.
 
-## Submit an ERGA Assembly Report (EAR)
+### 3.2 Submit an ERGA Assembly Report (EAR)
 
 To ensure that the assemblies released by the CBP are of the best possible quality, we have established a process to review assemblies before they can be deposited into the ENA. For this, you need to create an EAR (ERGA Assembly Report) for your curated assembly and send a request to the CBP EAR repository for review. Once you submit your request (Pull Request), a reviewer and a supervisor will be assigned, and a conversation can begin. They will provide comments and/or request changes, and once everyone is satisfied, your request will be approved, allowing you to proceed with the assembly submission to the ENA.
 
-## Submit Final Assembly to ENA
+### 3.3 Submit Final Assembly to ENA
 
 After completing the steps described above and receiving approval from the reviewer and supervisor, a genome assembly can be submitted. This submission will refer to an assembly BioProject, a sample, and one or more runs.
 
@@ -133,7 +132,7 @@ The unlocalised_list is a tabular file used to describe entries in our assembly 
 Once all the files needed for assembly submission are ready, they must be validated, uploaded, and submitted using the Webin command line submission interface (Webin-CLI). Please refer to the Webin command line submission interface documentation for full information about the submission process.
 
 <a name="goat"></a>
-##  GoaT Report
+## 4 GoaT Report
 
 [GoaT](https://goat.genomehubs.org/) is the official sequencing status tracker of the Earth Biogenome Project.
 From the CBP we generate a [report](https://docs.google.com/document/d/1v07sLdzDiWF5Pge4hYUd67wQ-dXTWK7EMRTp0i0vlD8/edit#heading=h.r98o47b47e3u) that updates GoaT, thus the EBP, with our sequencing progresses.
@@ -152,7 +151,7 @@ The portal will retrieve all the data published to INSDC under the CBP umbrella,
 For more info about the sequencing status take a look at this [document](https://docs.google.com/document/d/1v07sLdzDiWF5Pge4hYUd67wQ-dXTWK7EMRTp0i0vlD8/edit#heading=h.r98o47b47e3u)
 
 <a name="portal"></a>
-##  Data Portal
+## 5 Data Portal
 
 The [data portal](https://dades.biogenoma.cat/) collates the INSDC metadata with other metadata defined within the CBP, such as photos, vernacular names, custom metadata, publications and genome annotations.
 
