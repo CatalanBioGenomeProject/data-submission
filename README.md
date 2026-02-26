@@ -41,7 +41,7 @@ TOLIDs for all individuals planned for sequencing should be registered in advanc
 
 ### Registering Samples via the CBP Portal
 
-All samples must have an assigned BioSample accession number prior to sequencing. Sample registration can be completed through the CBP Data Portal in accordance with the provided [guidelines] (https://www.biogenoma.cat/wp-content/uploads/2025/06/Guia_Portal_CBP_ENG.pdf).
+All samples must have an assigned BioSample accession number prior to sequencing. Sample registration can be completed through the CBP Data Portal in accordance with the provided [guidelines](https://www.biogenoma.cat/wp-content/uploads/2025/06/Guia_Portal_CBP_ENG.pdf).
 
 <a name="sample"></a>
 ## Raw Reads submission
