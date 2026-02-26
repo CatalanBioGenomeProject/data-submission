@@ -52,7 +52,7 @@ To submit data independently, you must have valid credentials for an ENA Webin a
 
 ### 2.1 ENA Submission Scripts
 
-Some scripts to assist in data submission have been provided. Please read the accompanying instructions. Remember to provide the option `-p CBP` to create the projects with the CBP-specific template.
+Some scripts to assist in data submission have been provided. Please read the accompanying [instructions](https://github.com/cnag-aat/ERGA-submission/tree/main/get_submission_xmls#readme) to learn how to use them. Remember to provide the option `-p CBP` to create the projects with the CBP-specific template.
 
 ### 2.2 Create a Species Umbrella BioProject
 
@@ -60,15 +60,15 @@ An umbrella BioProject must be registered for each species assembled by the CBP.
 
 ### 2.3 Create a Read Data BioProject
 
-A dedicated Read Data BioProject must be created to host all raw sequencing reads and associated sequencing metadata. This BioProject should be registered as a child of the species umbrella BioProject established in Section 2.1. For reference, please consult PRJEB56813 as an example.
+A dedicated Read Data BioProject must be created to host all raw sequencing reads and associated sequencing metadata. This BioProject should be registered as a child of the species umbrella BioProject established in Section 2.2. For reference, please consult [PRJEB56813](https://www.ebi.ac.uk/ena/browser/view/PRJEB56813) as an example.
 
 ### 2.4 Transfer the Reads
 
-Now that we have created the BioProjects, we need to populate them with the data of our species. The first step is to collect all the reads and transfer them into your private Webin file upload area at EMBL-EBI. Please check this link for instructions on how to transfer the files. We recommend performing the data transfer via the Aspera `ascp` command-line program.
+Now that we have created the BioProjects, we need to populate them with the data of our species. The first step is to collect all the reads and transfer them into your private Webin file upload area at EMBL-EBI. Please check this [link](https://ena-docs.readthedocs.io/en/latest/submit/fileprep/upload.html.) for instructions on how to transfer the files. We recommend performing the data transfer via the [Aspera `ascp`](https://ena-docs.readthedocs.io/en/latest/submit/fileprep/upload.html#using-aspera-ascp-command-line-program) command-line program.
 
 ### 2.5 Submit Experiments and Runs
 
-Now we can submit all the metadata related to the reads and experiments and finalize the data submission. You can perform this step directly from the ENA Webin website or programmatically with XML files. To aid in the programmatic submission, we provide a series of Python scripts that will generate the XML files for submission starting from a tabular file with the metadata (`get_submission_xmls`). Remember to provide the option `-p CBP` to create the projects with the CBP-specific template.
+Now we can submit all the metadata related to the reads and experiments and finalize the data submission. You can perform this step directly from the ENA Webin website or programmatically with XML files. To aid in the programmatic submission, we provide a series of Python scripts that will generate the XML files for submission starting from a tabular file with the metadata ([`get_submission_xmls`](https://github.com/cnag-aat/ERGA-submission/tree/main/get_submission_xmls)). Remember to provide the option `-p CBP` to create the projects with the CBP-specific template.
 
 ## Assemble the Genome
 
