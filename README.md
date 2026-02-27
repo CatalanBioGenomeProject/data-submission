@@ -61,11 +61,11 @@ A dedicated Read Data BioProject must be created to host all raw sequencing read
 
 ### 2.4 Transfer the Reads
 
-Now that we have created the BioProjects, we need to populate them with the data of our species. The first step is to collect all the reads and transfer them into your private Webin file upload area at EMBL-EBI. Please check this [link](https://ena-docs.readthedocs.io/en/latest/submit/fileprep/upload.html.) for instructions on how to transfer the files. We recommend performing the data transfer via the [Aspera `ascp`](https://ena-docs.readthedocs.io/en/latest/submit/fileprep/upload.html#using-aspera-ascp-command-line-program) command-line program.
+Now that we have created the BioProjects, we need to populate them with the data of our species. The first step is to collect all the reads and transfer them into your private Webin file upload area at EMBL-EBI. Please check this [link](https://ena-docs.readthedocs.io/en/latest/submit/fileprep/upload.html) for instructions on how to transfer the files. We recommend performing the data transfer via the [Aspera `ascp`](https://ena-docs.readthedocs.io/en/latest/submit/fileprep/upload.html#using-aspera-ascp-command-line-program) command-line program.
 
 ### 2.5 Submit Experiments and Runs
 
-Now we can submit all the metadata related to the reads and experiments and finalize the data submission. You can perform this step directly from the ENA Webin website or programmatically with XML files. To aid in the programmatic submission, we provide a series of Python scripts that will generate the XML files for submission starting from a tabular file with the metadata ([`get_submission_xmls`](https://github.com/cnag-aat/ERGA-submission/tree/main/get_submission_xmls)). Remember to provide the option `-p CBP` to create the projects with the CBP-specific template.
+Now we can submit all the metadata related to the reads and experiments and finalize the data submission. You can perform this step directly from the ENA Webin website or programmatically with XML files. To aid in the programmatic submission, we provide a series of Bash and Python scripts that will generate the XML files for submission starting from a tabular file with the metadata ([`get_submission_xmls`](https://github.com/cnag-aat/ERGA-submission/tree/main/get_submission_xmls)). Remember to provide the option `-p CBP` to create the projects with the CBP-specific template.
 
 <a name="assembly"></a>
 ## 3 Genome assembly
