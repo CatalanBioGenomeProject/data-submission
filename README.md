@@ -1,345 +1,139 @@
-**DATA submission strategy for projects part of the CBP**
+# Data Submission Workflow for the CBP
 
-Deposition of the sequencing and assembly data is necessary for all
-genomes that are part of the CBP. They can both be submitted to the
-European Nucleotide Archive (ENA) or to the National Center for
-Biotechnology Information (NCBI), but we recommend the ENA. In this
-document, we will describe the submission process and the structure that
-the projects should have.
+The deposition of sequencing reads and genome assemblies is mandatory for all genomes generated as part of the CBP. Both data types may be submitted to either the European Nucleotide Archive (ENA) or the National Center for Biotechnology Information (NCBI); however, submission to ENA is strongly recommended.
 
----
+This document outlines the submission process and describes the recommended project structure.
 
-**Table of Contents**
-
-1. [ TAXID Registration. ](#taxid)
-2. [ TOLID Registration. ](#tolid)
-3. [ Sample Registration. ](#sample)
-4. [ Project structure. ](#project)
-5. [ Transferring the reads. ](#reads)
-6. [ Metadata submission. ](#metadata)
-7. [ Notify CBP ](#link)
-8. [ Assembly Submission. ](#assembly)
-9. [ GoaT Report. ](#goat)
-10. [ Data Portal. ](#portal)
-
----
-
+Principal investigators responsible for CBP-funded projects are expected to submit raw sequencing data promptly following sequencing. Genome assemblies should be submitted within a maximum timeframe of one year after data generation.
 
 <img src="./media/image1.png"
 style="width:6.69792in;height:5.28856in" />
 
-<a name="taxid"></a>
-## Register a new TaxID
+**Table of Contents**
 
-If the species does not have a taxonomic identifier, you must follow the instructions 
-in this [link](https://ena-docs.readthedocs.io/en/latest/faq/taxonomy_requests.html) 
-before you can proceed with the next steps.
+1. [ Sample Registration. ](#sample)
+2. [ Raw Reads submission. ](#reads)
+3. [ Assembly Submission. ](#assembly)
+4. [ GoaT Report. ](#goat)
+5. [ Data Portal. ](#portal)
 
-
-<a name="tolid"></a>
-## Registration of a specimen TOLID:
-
-A TOLID ([https://id.tol.sanger.ac.uk/](https://id.tol.sanger.ac.uk/.))
-is a unique identifier for an individual of a species sampled for genome
-assembly. It is made by a TOLID prefix and a number to indicate the
-individual that was sampled. The number is assigned in order of request
-and does not represent any ranking. The prefix is made of:
-
--   a lower-case letter for the high-level taxonomic rank and a
-    lower-case letter for the clade. Only one letter is used for
-    vertebrates (VGP legacy).
-
--   one upper, two lower case letters for genus.
-
--   one upper, three lower case letters for species (one upper, two
-    lower case for vertebrates, VGP legacy)
-
-e.g. aRanTem1 for the first sampled individual of Rana temporaria,
-xgPerPere3 for the third sampled individual of Peregriana peregra
-
-For naming genome assemblies of samples, we recommend to use the full
-ToLID and add .\<version\> Examples:
-
--   fCotGob3.1 (first assembly version of the 3rd individual of
-    Cottoperca gobio)
-
--   fAstCal1.2 (second assembly version of the first individual of
-    Astatotilapia calliptera)
-
-A TOLID for the individual used for genome assembly should be registered
-by the person responsible for the sample in the first place. To read more about TOLIDs
-and register yours, go to the following link:
-<https://id.tol.sanger.ac.uk/.>
-
-
-
+---
 <a name="sample"></a>
-## Register the sample
+## 1 Sample Registration
 
-Generate an ERGA/CBP Manifest via the CBP (link to be updated soon).
-Emelio to provide details and instructions on how to do so. I believe we
-are using the Tree of Life Checklist (ERC000053) from those listed here:
-https://www.ebi.ac.uk/ena/browser/checklists. The portal will generate a
-spreadsheet. This should be submit via COPO. We are still negotiating
-with Rob Davey how to approve users for the CBP and who will approve the
-submissions (currently a small group from ERGA direction is in charge).
+### 1.1 Registering a New TaxID
 
-<a name="submission"></a>
-## ENA submission scripts
+If the species does not yet have a taxonomic identifier (TaxID), you must follow the instructions in [this link](https://ena-docs.readthedocs.io/en/latest/faq/taxonomy_requests.html) before proceeding with subsequent steps.
 
-Some scripts to help in data submission have been provided, to use them please read [these instructions](https://github.com/cnag-aat/ERGA-submission/tree/main/get_submission_xmls#readme)
+### 1.2 Obtaining a TOLID
 
-<a name="project"></a>
-## Project structure
+A TOLID is a unique identifier assigned to an individual specimen sampled for genome assembly. It consists of a species-specific prefix followed by a numerical identifier indicating the sampled individual. The numerical component is assigned sequentially upon request and does not imply ranking or priority.
 
-We will adopt the project structure followed by the DToL. For this
-purpose, separate projects for the different types of data should be
-registered:
+For genome assembly naming, we recommend using the full TOLID followed by a version suffix in the format `.v<version>`. Examples include:
 
-1.  Data project with all the genomic and transcriptomic data produced.
+- `fCotGob3.1` (first assembly version of the 3rd individual of *Cottoperca gobio*)
+- `fAstCal1.2` (second assembly version of the first individual of *Astatotilapia calliptera*)
 
-2.  Analysis project with the genome assembly.
+TOLIDs for all individuals planned for sequencing should be registered in advance by the person responsible for the sample. Additional information and registration can be found at: [TOLID Registration](https://id.tol.sanger.ac.uk/).
 
-3.  Analysis project with the alternate genome assembly (optional).
+### 1.3 Registering Samples via the CBP Portal
 
-4.  Species overview umbrella project with the data and analysis
-    projects as children.
-
-The projects can be registered either to the ENA or the NCBI, 
-but here we provide scripts that will automatically generate the files needed to register the studies in the ENA.
-Please note that the CNAG can broker all CBP
-submissions but, if desired, data submission can also be done by the
-team responsible for the species. However, command line experience is
-recommended, given that some of the steps can only be done
-programmatically.
-
-In order to be able to submit your own data, please make sure that you have the credentials of your ENA account or create one if you do not have one (<https://www.ebi.ac.uk/ena/submit/webin/accountInfo>). 
+All samples must have an assigned BioSample accession number prior to sequencing. Sample registration can be completed through the CBP Data Portal in accordance with the provided [guidelines](https://www.biogenoma.cat/wp-content/uploads/2025/06/Guia_Portal_CBP_ENG.pdf).
 
 <a name="reads"></a>
-##  Transferring the reads
+## 2 Raw Reads submission
 
-Below we provide instructions on how to submit all the metadata related to the project, but in order for the submission to work, you first need to upload data files into your private Webin file upload area at EMBL-EBI. Please check instructions on how to transfer the files at: <https://ena-docs.readthedocs.io/en/latest/submit/fileprep/upload.html>. 
+Please note that CNAG can act as a broker for all CBP data submissions. Alternatively, submission may be carried out directly by the research team responsible for the species. However, prior experience with command-line environments is strongly recommended, as certain steps in the submission process can only be performed programmatically.
 
-Our recommended way of doing this is by using the Aspera ascp command line program (<https://ena-docs.readthedocs.io/en/latest/submit/fileprep/upload.html#using-aspera-ascp-command-line-program>)
+To submit data independently, you must have valid credentials for an ENA Webin account. If you do not already have an account, you should create one at the following link: [ENA Webin Account](https://www.ebi.ac.uk/ena/submit/webin/accountInfo).
 
-<a name="metadata"></a>
-##  Metadata submission
+### 2.1 ENA Submission Scripts
 
-Python scripts to generate the xml files that are required to register the projects and reads of a species in the ENA have been developed and can be downloaded from (<https://github.com/ERGA-consortium/ERGA-submission/tree/main/get_submission_xmls>). In order to run them you need to have python3 with the JINJA2 module installed in your system. 
+Some scripts to assist in data submission have been provided. Please read the accompanying [instructions](
+https://github.com/CatalanBioGenomeProject/ERGA-submission/tree/main/get_submission_xmls#readme) to learn how to use them. Remember to provide the option `-p CBP` to create the projects with the CBP-specific template.
 
-The **get_ENA_xml_files.py** script can produce the xml files that are required to register the projects and reads (experiments and/or runs) in the ENA. If you specify the option (**--project CBP**), the generated xml files will follow the metadata requirements for the CBP. To provide the information you must give a tabular file with the **-f** option. Please check the examples directory to see which fields this file should contain. 
+### 2.2 Create a Species Umbrella BioProject
 
-A run example would be: 
- ``` ~/ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f runs.ilCoeGlyc.txt -p CBP -o ilCoeGlyc_cbp ```
+An umbrella BioProject must be registered for each species assembled by the CBP. This umbrella BioProject will serve as the parent project for all data and assembly BioProjects associated with that species and will be a direct child of the CBP BioProject ([PRJEB49670](https://www.ebi.ac.uk/ena/browser/view/PRJEB49670)). For reference, please consult [PRJEB56817](https://www.ebi.ac.uk/ena/browser/view/PRJEB56817) as an example of an umbrella BioProject. You can use [this script](https://github.com/CatalanBioGenomeProject/ERGA-submission/tree/main/get_submission_xmls/get_umbrella_xml_ENA.py) to obtain an XML file that can be submitted to the ENA in order to create the umbrella project. Once you obtain the accession number, please report it via [this form](https://forms.gle/Ltg6PDS6xwKNec2f6) so we can add your project under the CBP.
 
-This command would produce the folowing files: 
+### 2.3 Create a Read Data BioProject
 
-- ilCoeGlyc_cbp.study.xml
-- ilCoeGlyc_cbp.exp.xml
-- ilCoeGlyc_cbp.runs.xml
+A dedicated Read Data BioProject must be created to host all raw sequencing reads and associated sequencing metadata. This BioProject should be registered as a child of the species umbrella BioProject established in Section 2.2. For reference, please consult [PRJEB56813](https://www.ebi.ac.uk/ena/browser/view/PRJEB56813) as an example.
 
-To submit these files to the ENA, you can execute the following curl command:
+### 2.4 Transfer the Reads
 
-``` curl -u Webin-XXXX:password -F "SUBMISSION=@submission.xml" -F "PROJECT=@ilCoeGlyc_pilot_cbp.study.xml" -F "EXPERIMENT=@ilCoeGlyc_pilot.exp.xml" -F "RUN=@ilCoeGlyc_pilot.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/" ```
+Now that we have created the BioProjects, we need to populate them with the data of our species. The first step is to collect all the reads and transfer them into your private Webin file upload area at EMBL-EBI. Please check this [link](https://ena-docs.readthedocs.io/en/latest/submit/fileprep/upload.html) for instructions on how to transfer the files. We recommend performing the data transfer via the [Aspera `ascp`](https://ena-docs.readthedocs.io/en/latest/submit/fileprep/upload.html#using-aspera-ascp-command-line-program) command-line program.
 
-Also note that you can try submitting to the development server first, to check that everything is okay before moving on with the submission. To submit to the development server, just replace the url in the previous command with: "https://wwwdev.ebi.ac.uk/ena/submit/drop-box/submit/". More details on how to submit xml files programmatically can be found at: <https://ena-docs.readthedocs.io/en/latest/submit/reads/programmatic.html>. 
+### 2.5 Submit Experiments and Runs
 
-The submission.xml should look like this:
-
-````
-<SUBMISSION>
-    <ACTIONS>
-        <ACTION>
-            <ADD/>
-        </ACTION>
-        <ACTION>
-            <RELEASE/>
-        </ACTION>
-    </ACTIONS>
-</SUBMISSION>
-````
-
-<u>**Species umbrella project registration**</u>
-
-The **get_umbrella_xml_ENA.py** script can produce the xml file required to register the umbrella project of your species. If you specify the option (**--project CBP**), the generated xml file will follow the metadata requirements for the CBP. You need to specify the taxonomic description of your species and the accesion ids of the projects that were created in the previous step. 
-
-A run example would be: 
- ```~/ERGA-submission/get_submission_xmls/get_umbrella_xml_ENA.py -s "Coenonympha glycerion" -t ilCoeGlyc1 -n "Lleonada de muntanya, chestnut heath butterfly"  -p CBP -a PRJEB71110 PRJEB71111 -x 242261 ```
-
-This command will produce the umbrella.xml file that you can then submit like the other xml files: 
-
-``` curl -u Webin-XXXX:password -F "SUBMISSION=@submission.xml" -F "PROJECT=@umbrella.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/" ```
-
-<a name="link"></a>
-## Notify CBP 
-
-Once you consider your assembly is complete and you have completed the steps described above, you should notify to the CBP by filling in the following form: <https://forms.gle/Ltg6PDS6xwKNec2f6>. There we ask for the umbrella project id, some of the assembly details and a pdf with an **EAR Report**. To produce this pdf report you must run the code found at <https://github.com/ERGA-consortium/EARs>. This will allow us to review the quality of the assembly and add your project as a child to the CBP umbrella. 
+Now we can submit all the metadata related to the reads and experiments and finalize the data submission. You can perform this step directly from the ENA Webin website or programmatically with XML files. To aid in the programmatic submission, we provide a series of Bash and Python scripts that will generate the XML files for submission starting from a tabular file with the metadata ([`get_submission_xmls`](https://github.com/CatalanBioGenomeProject/ERGA-submission/tree/main/get_submission_xmls)). Remember to provide the option `-p CBP` to create the projects with the CBP-specific template.
 
 <a name="assembly"></a>
-##  Assembly submission
+## 3 Genome assembly
+### 3.1 Assemble the Genome
 
-After completing the steps described above and receiving a go ahead from the CBP, a genome assembly can
-be submitted. This submission will refer to a project (the project for
-the assembly that we registered before), a sample, and one or more runs.
-The genome assembly can be submitted to the ENA annotated or
-unannotated. Detailed instructions on how to perform this step can be
-found at:
-<https://ena-docs.readthedocs.io/en/latest/submit/assembly.html>. To
-simplify the submission process, we have included here some the
-recommendations.
+Our aim is to obtain high-quality reference genomes following the [EBP/ERGA best practice standards](https://www.earthbiogenome.org/report-on-assembly-recommendations). Ideally, the genome should be assembled into chromosomes with Hi-C, and manual curation should be performed.
 
-Before submitting your assembly, consider the highest level of assembly
-which has been obtained. ENA recognizes three assembly levels. An
-assembly may contain a mixture of the three sequence types:
+### 3.2 Submit an ERGA Assembly Report (EAR)
 
--   **Contig:** the highest level of assembly is contigs.
+To ensure that the assemblies released by the CBP are of the best possible quality, we have established a process to review assemblies before they can be deposited into the ENA. For this, you need to create an EAR (ERGA Assembly Report) for your curated assembly and send a request to the [CBP EAR repository](https://github.com/CatalanBioGenomeProject/CBP-EARs) for review. Once you submit your request (Pull Request), a reviewer and a supervisor will be assigned, and a conversation can begin. They will provide comments and/or request changes, and once everyone is satisfied, your request will be approved, allowing you to proceed with the assembly submission to the ENA.
 
--   **Scaffold:** the highest level of assembly consists of gapped
-    contigs (scaffolds).
+### 3.3 Submit Final Assembly to ENA
 
--   **Chromosome:** the highest level of assembly includes assembled
-    chromosomes.
+After completing the steps described above and receiving approval from the reviewer and supervisor, a genome assembly must be submitted. This submission will refer to an assembly BioProject, a sample, and one or more runs.
 
-The aim of the CBP is to obtain chromosome level assemblies, but in some
-cases this may not be possible. Also note that lower-level assemblies
-(eg. contigs or scaffolds) can be updated to chromosome-level after
-submission. The term “chromosome” in this context will include both the
-nuclear and organellar chromosomes as part of the same submission.
+If the assembly BioProject has not yet been created, it should be established now using the XML provided by the ERGA submission scripts or directly via the Webin website. For reference, please consult [PRJEB56815](https://www.ebi.ac.uk/ena/browser/view/PRJEB56815) as an example.
 
-The following instructions show how to submit a genome assembly in
-chromosome-level, but with the ENA guide and this example, you should be
-able to submit other level assemblies as well.
+Detailed instructions on how to perform this step can be found at: [ENA Assembly Submission](https://ena-docs.readthedocs.io/en/latest/submit/assembly.html). To simplify the submission process, we have included examples and recommendations.
 
-Before assembly submission some files need to be prepared. First of all,
-a **manifest file** that will define the essential metadata shall be
-submitted with the following structure:
+Before assembly submission, some files need to be prepared. First, a manifest file that will define the essential metadata. Below is an example manifest for a CBP assembly submission. You may use this as a starting point, but you will need to replace the second column with the appropriate values.
 
--   Field name (first column): case insensitive field name
+| FIELD                | EXAMPLE          |
+|----------------------|------------------|
+| STUDY                | PRJEB56815       |
+| SAMPLE               | ERS13641591      |
+| RUN_REF              | ERR10446184      |
+| ASSEMBLYNAME         | fXyrNov1.1       |
+| ASSEMBLY_TYPE        | isolate          |
+| COVERAGE             | 100              |
+| PROGRAM              | Nextdenovo, hypo, purge_dups, yahs |
+| PLATFORM             | ONT, Illumina, OmniC |
+| MINGAPLENGTH         | 200              |
+| MOLECULETYPE         | genomic DNA      |
+| **FASTA**                | **fXyrNov1.1.fa.gz** |
+| **CHROMOSOME_LIST**      | **fXyrNov1.1.chromosome_list.txt.gz** |
+| **UNLOCALISED_LIST**     | **fXyrNov1.1.unlocalised.txt.gz** |
 
--   Field value (second column): field value
+We have highlighted those fields that correspond to files; you will need to assess whether you need them depending on the status of your assembly. For example, if you wish to submit an annotated assembly, you will need to use the FLATFILE field instead of the FASTA one, or if your assembly is not chromosome-level, you will not need the CHROMOSOME_LIST and UNLOCALISED_LIST fields. You can check the following link for instructions on how to prepare each of these files: [ENA Assembly Preparation](https://ena-docs.readthedocs.io/en/latest/submit/assembly/genome.html#stage-2-prepare-the-files).
 
-The following metadata fields are supported in the manifest file for
-genome context:
+In a chromosome-level assembly, we can have three types of sequences:
 
--   STUDY: Study accession - mandatory
+1. **Chromosomes**: Correspond to the segments of sequence that have been joined into a complete chromosome.
+2. **Unlocalised**: These are sequences that can be located in a chromosome but whose exact position or orientation is unknown. In these cases, we simply unlocalize them to one chromosome.
+3. **Unplaced Contigs or Scaffolds**: These are sequences present in the assembly but whose chromosome affiliation is unknown. They are often referred to as chaff or shrapnel, typically corresponding to highly repetitive sequences.
 
--   SAMPLE: Sample accession - mandatory
+In the FASTA file, you need to include ALL sequences: chromosomes, unlocalised, and unplaced.
 
--   ASSEMBLYNAME: Unique assembly name, user-provided - mandatory
+The chromosome_list is a tabular file used to describe those entries in our assembly that correspond to a chromosome, either nuclear or organelle. Below is an example:
 
--   ASSEMBLY_TYPE: ‘clone or isolate’ - mandatory
+| ENTRY          | ID | TYPE           | ORGANELLE          |
+|----------------|----|----------------|---------------------
+| SUPER_1        | 1  | chromosome     |                    |
+| SUPER_2        | 2  | chromosome     |                    |
+| SUPER_3        | 3  | chromosome     |                    |
+| fXyrNov_MT     | MT | circular-chromosome | mitochondrion |
 
--   COVERAGE: The estimated depth of sequencing coverage - mandatory
+The unlocalised_list is a tabular file used to describe entries in our assembly that correspond to unlocalised sequences. Below is an example:
 
--   PROGRAM: The assembly program - mandatory
+| ENTRY                  | ID |
+|------------------------|----|
+| SUPER_2_unloc_1       | 2  |
+| SUPER_19_unloc_1      | 19 |
 
--   PLATFORM: The sequencing platform, or comma-separated list of
-    > platforms - mandatory
-
--   MINGAPLENGTH: Minimum length of consecutive Ns to be considered a
-    > gap - optional
-
--   MOLECULETYPE: ‘genomic DNA’, ‘genomic RNA’ or ‘viral cRNA’
-    > - optional
-
--   DESCRIPTION: Free text description of the genome assembly - optional
-
--   RUN_REF: Comma separated list of run accession(s) – optional
-
-Various file name fields are supported in the manifest file. Note that
-all of these are optional, though of course at least one must be
-provided, and some may only be relevant in the presence of other file
-types. The available fields are as follow:
-
--   FASTA: sequences in fasta format
-
--   FLATFILE: sequences in [EMBL-Bank flat file
-    > format](https://ena-docs.readthedocs.io/en/latest/submit/fileprep/flat-file-example.html)
-
--   AGP: sequences in [AGP
-    > format](https://www.ncbi.nlm.nih.gov/assembly/agp/AGP_Specification/)
-
--   CHROMOSOME_LIST: list of chromosomes
-
--   UNLOCALISED_LIST: list of unlocalised sequences
-
-In the following page
-(<https://ena-docs.readthedocs.io/en/latest/submit/assembly/genome.html>)
-you will find instructions on how to prepare each of the files. As a
-general idea, keep in mind that you need to provide the assembly either
-as a **FASTA** or a **FLATFILE**. In case you do not want to submit the
-annotation, you should just give a FASTA file with all the sequences in
-your assembly. However, if you want to provide the annotation, an EMBL
-file should be produced and submitted with the FLATFILE option. This
-embl file needs to follow the ENA format recommendations
-(<https://ena-docs.readthedocs.io/en/latest/submit/fileprep/assembly.html#flat-file>).
-
-The <u>CHROMOSOME_LIST</u> file must be provided when the submission
-contains assembled chromosomes. The file is a tab separated text file
-(USASCII7) up to four columns.
-
--   **OBJECT_NAME (first column):** The unique sequence name, matching
-    with the sequence name in your FASTA file (‘\>’ line) or EMBL flat
-    file (‘AC \* ‘ line).
-
--   **CHROMOSOME_NAME (second column):** The chromosome name. The value
-    will appear as the /chromosome, /plasmid or /segment qualifier in
-    the EMBL-Bank flat files. There are some restrictions on the values
-    that this field should contain, check the ENA link pasted before for
-    details. We recommend this to be a **number**, if the chromosome
-    number is known. In case the mitochondrial genome is submitted, its
-    value can be “**MIT**”.
-
--   **CHROMOSOME_TYPE (third column):** Allowed values:
-
-    -   chromosome
-
-    -   plasmid
-
-    -   linkage_group
-
-    -   monopartite
-
-    -   segmented
-
-    -   multipartite
-
--   **CHROMOSOME_LOCATION (optional fourth column):** By default,
-    eukaryotic chromosomes will be assumed to reside in the nucleus and
-    prokaryotic chromosomes and plasmids in the cytoplasm. Check the
-    possible values in the ENA page.
-
-The <u>UNLOCALISED LIST</u> file should be provided when the submission
-contains chromosomes with unlocalised sequences. Unlocalised sequences
-are contigs or scaffolds that are associated with a specific chromosome
-but for which order and orientation is unknown. An example unlocalised
-list file:
-
-<img src="./media/image7.png" style="width:2.375in;height:0.94444in" />
-
-The unlocalised list file is a tab separated text file (USASCII7)
-containing the following columns:
-
--   **OBJECT_NAME (first column):** the unique sequence name matching a
-    FASTA header or flatfile AC \* line
-
--   **CHROMOSOME_NAME (second column):** the unique chromosome name
-    associated with this sequence. This must match with a
-    CHROMOSOME_NAME in the chromosome list file.
-
-The <u>AGP</u> file might be used to describe the assembly of scaffolds
-from contigs or of chromosomes from scaffolds.
-
-Once all the files needed for assembly submission are ready, they need
-to be validated, uploaded and submitted using the [Webin command line
-submission
-interface](https://ena-docs.readthedocs.io/en/latest/submit/general-guide/webin-cli.html) (Webin-CLI).
-Please refer to the [Webin command line submission
-interface](https://ena-docs.readthedocs.io/en/latest/submit/general-guide/webin-cli.html) documentation
-for full information about the submission process.
+Once all the files needed for assembly submission are ready, they must be validated, uploaded, and submitted using the Webin command line submission interface (Webin-CLI). Please refer to the [Webin command line](https://ena-docs.readthedocs.io/en/latest/submit/general-guide/webin-cli.html) submission interface documentation for full information about the submission process.
 
 <a name="goat"></a>
-##  GoaT Report
+## 4 GoaT Report
 
 [GoaT](https://goat.genomehubs.org/) is the official sequencing status tracker of the Earth Biogenome Project.
 From the CBP we generate a [report](https://docs.google.com/document/d/1v07sLdzDiWF5Pge4hYUd67wQ-dXTWK7EMRTp0i0vlD8/edit#heading=h.r98o47b47e3u) that updates GoaT, thus the EBP, with our sequencing progresses.
@@ -357,9 +151,8 @@ The portal will retrieve all the data published to INSDC under the CBP umbrella,
 
 For more info about the sequencing status take a look at this [document](https://docs.google.com/document/d/1v07sLdzDiWF5Pge4hYUd67wQ-dXTWK7EMRTp0i0vlD8/edit#heading=h.r98o47b47e3u)
 
-
 <a name="portal"></a>
-##  Data Portal
+## 5 Data Portal
 
 The [data portal](https://dades.biogenoma.cat/) collates the INSDC metadata with other metadata defined within the CBP, such as photos, vernacular names, custom metadata, publications and genome annotations.
 
