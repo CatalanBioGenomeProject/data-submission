@@ -129,7 +129,7 @@ The unlocalised_list is a tabular file used to describe entries in our assembly 
 | SUPER_2_unloc_1       | 2  |
 | SUPER_19_unloc_1      | 19 |
 
-Once all the files needed for assembly submission are ready, they must be validated, uploaded, and submitted using the Webin command line submission interface (Webin-CLI). Please refer to the Webin command line submission interface documentation for full information about the submission process.
+Once all the files needed for assembly submission are ready, they must be validated, uploaded, and submitted using the Webin command line submission interface (Webin-CLI). Please refer to the [Webin command line](https://ena-docs.readthedocs.io/en/latest/submit/general-guide/webin-cli.html) submission interface documentation for full information about the submission process.
 
 <a name="goat"></a>
 ## 4 GoaT Report
