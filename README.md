@@ -71,17 +71,17 @@ Now we can submit all the metadata related to the reads and experiments and fina
 ## 3 Genome assembly
 ### 3.1 Assemble the Genome
 
-Our aim is to obtain high-quality reference genomes following the EBP/ERGA best practice standards. Ideally, the genome should be assembled into chromosomes with Hi-C, and manual curation should be performed.
+Our aim is to obtain high-quality reference genomes following the [EBP/ERGA best practice standards](https://www.earthbiogenome.org/report-on-assembly-recommendations). Ideally, the genome should be assembled into chromosomes with Hi-C, and manual curation should be performed.
 
 ### 3.2 Submit an ERGA Assembly Report (EAR)
 
-To ensure that the assemblies released by the CBP are of the best possible quality, we have established a process to review assemblies before they can be deposited into the ENA. For this, you need to create an EAR (ERGA Assembly Report) for your curated assembly and send a request to the CBP EAR repository for review. Once you submit your request (Pull Request), a reviewer and a supervisor will be assigned, and a conversation can begin. They will provide comments and/or request changes, and once everyone is satisfied, your request will be approved, allowing you to proceed with the assembly submission to the ENA.
+To ensure that the assemblies released by the CBP are of the best possible quality, we have established a process to review assemblies before they can be deposited into the ENA. For this, you need to create an EAR (ERGA Assembly Report) for your curated assembly and send a request to the [CBP EAR repository](https://github.com/CatalanBioGenomeProject/CBP-EARs) for review. Once you submit your request (Pull Request), a reviewer and a supervisor will be assigned, and a conversation can begin. They will provide comments and/or request changes, and once everyone is satisfied, your request will be approved, allowing you to proceed with the assembly submission to the ENA.
 
 ### 3.3 Submit Final Assembly to ENA
 
-After completing the steps described above and receiving approval from the reviewer and supervisor, a genome assembly can be submitted. This submission will refer to an assembly BioProject, a sample, and one or more runs.
+After completing the steps described above and receiving approval from the reviewer and supervisor, a genome assembly must be submitted. This submission will refer to an assembly BioProject, a sample, and one or more runs.
 
-If the assembly BioProject has not yet been created, it should be established now using the XML provided by the ERGA submission scripts or directly via the Webin website. For reference, please consult PRJEB56815 as an example.
+If the assembly BioProject has not yet been created, it should be established now using the XML provided by the ERGA submission scripts or directly via the Webin website. For reference, please consult [PRJEB56815](https://www.ebi.ac.uk/ena/browser/view/PRJEB56815) as an example.
 
 Detailed instructions on how to perform this step can be found at: [ENA Assembly Submission](https://ena-docs.readthedocs.io/en/latest/submit/assembly.html). To simplify the submission process, we have included examples and recommendations.
 
@@ -99,9 +99,9 @@ Before assembly submission, some files need to be prepared. First, a manifest fi
 | PLATFORM             | ONT, Illumina, OmniC |
 | MINGAPLENGTH         | 200              |
 | MOLECULETYPE         | genomic DNA      |
-| FASTA                | fXyrNov1.1.fa.gz |
-| CHROMOSOME_LIST      | fXyrNov1.1.chromosome_list.txt.gz |
-| UNLOCALISED_LIST     | fXyrNov1.1.unlocalised.txt.gz |
+| *FASTA                | fXyrNov1.1.fa.gz* |
+| *CHROMOSOME_LIST      | fXyrNov1.1.chromosome_list.txt.gz* |
+| *UNLOCALISED_LIST     | fXyrNov1.1.unlocalised.txt.gz* |
 
 We have highlighted those fields that correspond to files; you will need to assess whether you need them depending on the status of your assembly. For example, if you wish to submit an annotated assembly, you will need to use the FLATFILE field instead of the FASTA one, or if your assembly is not chromosome-level, you will not need the CHROMOSOME_LIST and UNLOCALISED_LIST fields. You can check the following link for instructions on how to prepare each of these files: [ENA Assembly Preparation](https://ena-docs.readthedocs.io/en/latest/submit/assembly/genome.html#stage-2-prepare-the-files).
 
