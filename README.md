@@ -49,11 +49,12 @@ To submit data independently, you must have valid credentials for an ENA Webin a
 
 ### 2.1 ENA Submission Scripts
 
-Some scripts to assist in data submission have been provided. Please read the accompanying [instructions](https://github.com/cnag-aat/ERGA-submission/tree/main/get_submission_xmls#readme) to learn how to use them. Remember to provide the option `-p CBP` to create the projects with the CBP-specific template.
+Some scripts to assist in data submission have been provided. Please read the accompanying [instructions](
+https://github.com/CatalanBioGenomeProject/ERGA-submission/tree/main/get_submission_xmls#readme) to learn how to use them. Remember to provide the option `-p CBP` to create the projects with the CBP-specific template.
 
 ### 2.2 Create a Species Umbrella BioProject
 
-An umbrella BioProject must be registered for each species assembled by the CBP. This umbrella BioProject will serve as the parent project for all data and assembly BioProjects associated with that species and will be a direct child of the CBP BioProject ([PRJEB49670](https://www.ebi.ac.uk/ena/browser/view/PRJEB49670)). For reference, please consult [PRJEB56817](https://www.ebi.ac.uk/ena/browser/view/PRJEB56817) as an example of an umbrella BioProject. You can use [this script](https://github.com/cnag-aat/ERGA-submission/blob/main/get_submission_xmls/get_umbrella_xml_ENA.py) to obtain an XML file that can be submitted to the ENA in order to create the umbrella project. Once you obtain the accession number, please report it via [this form](https://forms.gle/Ltg6PDS6xwKNec2f6) so we can add your project under the CBP.
+An umbrella BioProject must be registered for each species assembled by the CBP. This umbrella BioProject will serve as the parent project for all data and assembly BioProjects associated with that species and will be a direct child of the CBP BioProject ([PRJEB49670](https://www.ebi.ac.uk/ena/browser/view/PRJEB49670)). For reference, please consult [PRJEB56817](https://www.ebi.ac.uk/ena/browser/view/PRJEB56817) as an example of an umbrella BioProject. You can use [this script](https://github.com/CatalanBioGenomeProject/ERGA-submission/tree/main/get_submission_xmls/get_umbrella_xml_ENA.py) to obtain an XML file that can be submitted to the ENA in order to create the umbrella project. Once you obtain the accession number, please report it via [this form](https://forms.gle/Ltg6PDS6xwKNec2f6) so we can add your project under the CBP.
 
 ### 2.3 Create a Read Data BioProject
 
@@ -65,7 +66,7 @@ Now that we have created the BioProjects, we need to populate them with the data
 
 ### 2.5 Submit Experiments and Runs
 
-Now we can submit all the metadata related to the reads and experiments and finalize the data submission. You can perform this step directly from the ENA Webin website or programmatically with XML files. To aid in the programmatic submission, we provide a series of Bash and Python scripts that will generate the XML files for submission starting from a tabular file with the metadata ([`get_submission_xmls`](https://github.com/cnag-aat/ERGA-submission/tree/main/get_submission_xmls)). Remember to provide the option `-p CBP` to create the projects with the CBP-specific template.
+Now we can submit all the metadata related to the reads and experiments and finalize the data submission. You can perform this step directly from the ENA Webin website or programmatically with XML files. To aid in the programmatic submission, we provide a series of Bash and Python scripts that will generate the XML files for submission starting from a tabular file with the metadata ([`get_submission_xmls`](https://github.com/CatalanBioGenomeProject/ERGA-submission/tree/main/get_submission_xmls)). Remember to provide the option `-p CBP` to create the projects with the CBP-specific template.
 
 <a name="assembly"></a>
 ## 3 Genome assembly
