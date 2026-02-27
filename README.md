@@ -99,9 +99,9 @@ Before assembly submission, some files need to be prepared. First, a manifest fi
 | PLATFORM             | ONT, Illumina, OmniC |
 | MINGAPLENGTH         | 200              |
 | MOLECULETYPE         | genomic DNA      |
-| *FASTA                | fXyrNov1.1.fa.gz* |
-| *CHROMOSOME_LIST      | fXyrNov1.1.chromosome_list.txt.gz* |
-| *UNLOCALISED_LIST     | fXyrNov1.1.unlocalised.txt.gz* |
+| **FASTA                | fXyrNov1.1.fa.gz** |
+| **CHROMOSOME_LIST      | fXyrNov1.1.chromosome_list.txt.gz** |
+| **UNLOCALISED_LIST     | fXyrNov1.1.unlocalised.txt.gz** |
 
 We have highlighted those fields that correspond to files; you will need to assess whether you need them depending on the status of your assembly. For example, if you wish to submit an annotated assembly, you will need to use the FLATFILE field instead of the FASTA one, or if your assembly is not chromosome-level, you will not need the CHROMOSOME_LIST and UNLOCALISED_LIST fields. You can check the following link for instructions on how to prepare each of these files: [ENA Assembly Preparation](https://ena-docs.readthedocs.io/en/latest/submit/assembly/genome.html#stage-2-prepare-the-files).
 
