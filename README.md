@@ -115,11 +115,11 @@ In the FASTA file, you need to include ALL sequences: chromosomes, unlocalised, 
 
 The chromosome_list is a tabular file used to describe those entries in our assembly that correspond to a chromosome, either nuclear or organelle. Below is an example:
 
-| ENTRY          | ID | TYPE           |
-|----------------|----|----------------|
-| SUPER_1        | 1  | chromosome     |
-| SUPER_2        | 2  | chromosome     |
-| SUPER_3        | 3  | chromosome     |
+| ENTRY          | ID | TYPE           | ORGANELLE          |
+|----------------|----|----------------|---------------------
+| SUPER_1        | 1  | chromosome     |                    |
+| SUPER_2        | 2  | chromosome     |                    |
+| SUPER_3        | 3  | chromosome     |                    |
 | fXyrNov_MT     | MT | circular-chromosome | mitochondrion |
 
 The unlocalised_list is a tabular file used to describe entries in our assembly that correspond to unlocalised sequences. Below is an example:
