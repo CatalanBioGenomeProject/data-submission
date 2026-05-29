@@ -76,11 +76,11 @@ Our aim is to obtain high-quality reference genomes following the [EBP/ERGA best
 
 ### 3.2 Submit an ERGA Assembly Report (EAR)
 
-To ensure that the assemblies released by the CBP are of the best possible quality, we have established a process to review assemblies before they can be deposited into the ENA. For this, you need to create an EAR (ERGA Assembly Report) for your curated assembly and send a request to the [CBP EAR repository](https://github.com/CatalanBioGenomeProject/CBP-EARs) for review. Once you submit your request (Pull Request), a reviewer and a supervisor will be assigned, and a conversation can begin. They will provide comments and/or request changes, and once everyone is satisfied, your request will be approved, allowing you to proceed with the assembly submission to the ENA.
+To ensure that the assemblies released by the CBP are of the best possible quality, we have established a process to review assemblies before they can be deposited into the ENA. To begin the process, make sure you are registered as a user in the CBP Genome Tracking Console (https://genomes.cnag.cat/cbp/accounts/signup/). This is separate from the data portal and is designed primarily for tracking assembly progress and managing assembly approval via EAR reviews. For this, you need to create an EAR (ERGA Assembly Report) for your curated assembly using the make_ear.py script from the [CBP EAR repository](https://github.com/CatalanBioGenomeProject/CBP-EARs) and submit a review request via [https://genomes.cnag.cat/cbp/accounts/signup/](https://genomes.cnag.cat/cbp/ear/new/), a reviewer and a supervisor will be assigned, and a conversation can begin. They will provide comments and/or request changes, and once everyone is satisfied, your request will be approved, allowing you to proceed with the assembly submission to the ENA.
 
 ### 3.3 Submit Final Assembly to ENA
 
-After completing the steps described above and receiving approval from the reviewer and supervisor, a genome assembly must be submitted. This submission will refer to an assembly BioProject, a sample, and one or more runs.
+After completing the steps described above and receiving approval from the reviewer and supervisor, a genome assembly (or assemblies) must be submitted. This submission will refer to an assembly BioProject, a sample, and one or more runs.
 
 If the assembly BioProject has not yet been created, it should be established now using the XML provided by the ERGA submission scripts or directly via the Webin website. For reference, please consult [PRJEB56815](https://www.ebi.ac.uk/ena/browser/view/PRJEB56815) as an example.
 
@@ -96,8 +96,8 @@ Before assembly submission, some files need to be prepared. First, a manifest fi
 | ASSEMBLYNAME         | fXyrNov1.1       |
 | ASSEMBLY_TYPE        | isolate          |
 | COVERAGE             | 100              |
-| PROGRAM              | Nextdenovo, hypo, purge_dups, yahs |
-| PLATFORM             | ONT, Illumina, OmniC |
+| PROGRAM              | Hifiasm, purge_dups, yahs |
+| PLATFORM             | ONT, OmniC       |
 | MINGAPLENGTH         | 200              |
 | MOLECULETYPE         | genomic DNA      |
 | **FASTA**                | **fXyrNov1.1.fa.gz** |
@@ -143,11 +143,11 @@ Since March 2023, users are responsible to update their data in the CBP portal. 
 
 **Update the sequencing status of the species when:**
 
-- the sequencing data of the species are not yet submitted to INSDC or are submitted but with an embargo (they are not public yet)
+- the sequencing data of the species are not yet submitted to INSDC or are submitted but not publicly released
 - a paper related to the sequenced species is published
 - the sequencing status of the species changes, for instance the DNA has been sequenced etc.
 
-The portal will retrieve all the data published to INSDC under the CBP umbrella, this means that it is not necessary to update Emilio if the data are already public, the process is automatized!
+The portal will retrieve all the data published to INSDC under the CBP umbrella, this means that it is not necessary to update Emilio if the data are already public, the process is automated!
 
 For more info about the sequencing status take a look at this [document](https://docs.google.com/document/d/1v07sLdzDiWF5Pge4hYUd67wQ-dXTWK7EMRTp0i0vlD8/edit#heading=h.r98o47b47e3u)
 
